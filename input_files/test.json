@@ -1,0 +1,6 @@
+{
+    "output_dir": "../tmp_data/test",
+    "pre_processing": {
+        "scale_images" : true
+    }
+}

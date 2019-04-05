@@ -1,0 +1,16 @@
+###### use requirements without version specifier for now ######
+numpy
+scipy
+matplotlib
+sphinx
+jupyter
+nbsphinx
+codecov
+coverage
+mock
+pytest>=3.0.0
+pytest-pep8
+pytest-cov
+pytest-mock
+pylint
+yapf
