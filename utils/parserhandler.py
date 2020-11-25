@@ -68,8 +68,9 @@ class ParserHandler(object):
     def _add_argument(parser, tag, validopt):
         argtype = validopt.type
         if argtype == list:
-            parser.add_argument(tag, *validopt.alias, nargs='+', type=argtype,
-                                help=validopt.help)
+            parser.add_argument(tag, *validopt.alias,
+                                nargs=validopt.nargs_argument(),
+                                type=validopt.subtype, help=validopt.help)
         elif argtype == bool:
             parser.add_argument(tag, *validopt.alias, type=str2bool,
                                 help=validopt.help)

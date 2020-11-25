@@ -54,7 +54,10 @@ class OptionsHandler(object):
                 help='The path to the log file'),
             'output_dir': ValidOption(
                 type=str, default='./',
-                help='Specifies the output directory')}
+                help='Specifies the output directory'),
+            'no_timestamp': ValidOption(
+                type=bool, default=False,
+                help='Omit the time stamp when creating output directories')}
 
     def __init__(self):
         ''' Prepares the overall defaults and argument parser. '''

@@ -14,8 +14,8 @@ def read(fname):
 setup(
     name='calculon',
     version='0.1',
-    author='The project B team',
-    author_email='biehler@ebenbuild.com',
+    author='Nina Pischke & Jonas Biehler',
+    author_email='pischke@lnm.mw.tum.de, biehler@lnm.mw.tum.de',
     description='A package for semantic segmentation of \
                     chest-ct scans"',
     long_description=read('README.md'),

@@ -135,7 +135,7 @@ class ValidOption(object):
                 mod = mod[1:-1].split(',')
                 return list(map(lambda x: self.cast(x.strip(), self.subtype),
                                 mod))
-        message = log.error('Unable to caste \'{}\' \
+        message = log.error('Unable to cast \'{}\' \
                     to \type \'list({})\''.format(
                     val, self.subtype))
         raise FailedCastError(message)
@@ -168,3 +168,11 @@ class ValidOption(object):
                 message = log.error('Invalid selection \'{}\'. \
                     Possible choices are \'{}\''.format(val, self.choices))
                 raise FailedVerificationError(message)
+
+    def nargs_argument(self):
+        ''' Returns argument that can be used as input to argparse nargs '''
+        if self.type == list:
+            if hasattr(self, 'length'):
+                return int(self.length)
+            return '+'
+        return None
